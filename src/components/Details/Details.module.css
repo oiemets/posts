@@ -1,0 +1,107 @@
+.arrow {
+    display: block;
+    margin: 30px 0;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(-45deg);
+}
+
+.arrow::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 45px;
+    background-color: #000;
+    transform: rotate(-45deg) translate(15px, 4px);
+}
+
+.arrow:hover {
+    cursor: pointer;
+    left: -83px;
+    top:  53px;
+}
+
+.main {
+    width: 98%;
+    margin: 0 auto;
+} 
+
+.details {
+    margin: 20px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+    font-size: 1.1em;
+}
+
+.details h3 {
+    font-weight: bold;
+}
+
+.commentsTitle {
+    font-weight: bold;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 5px;
+}
+
+.commentForm {
+    margin: 30px 0;
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.255);
+    border: 1px solid rgba(0, 255, 255, 0.255);
+    border-radius: 3px;
+}
+
+.commentForm input {
+    height: 30px;
+    padding: 5px;
+    font-size:1em;
+    border: 1px solid aqua;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.commentForm input::placeholder, .commentForm textarea::placeholder {
+    color:  #b1b1b1;
+}
+
+.commentForm input:focus, .commentForm textarea:focus {
+    outline: none;
+}
+
+.commentForm textarea {
+    font-size: 1em;
+    font-family: inherit;
+    padding: 5px;
+    border: 1px solid aqua;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.commentForm button {
+    height: 30px;
+    border: 1px solid aqua;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    color: #5F6368;
+    font-size: 1em;
+    width: 80px;
+    align-self: flex-end;
+}
+
+.commentForm button:hover {
+    cursor: pointer;
+    background-color: rgb(245, 242, 242);
+    border: 1px solid grey;
+    color: rgb(45, 45, 45);
+}
+
+.commentForm button:focus {
+    outline: none;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from '../Post/Post';
+import classes from './ThreadPage.module.css';
 
 
 export default class extends React.Component {
@@ -8,10 +9,9 @@ export default class extends React.Component {
             <>
                 <header>
                     <h1>Posts</h1>
-                    <button className="write-btn" onClick={this.props.writePostBtnHandler}>CREATE POST</button>
+                    <button className={classes.writeBtn} onClick={this.props.writePostBtnHandler}>CREATE POST</button>
                 </header>
-                <main className="main">
-                    <div className="thread">
+                <main className={classes.main}>
                         {this.props.post.map((post, index) => {
                             return <Post 
                                 post={post} 
@@ -19,9 +19,8 @@ export default class extends React.Component {
                                 index={index} 
                                 postHandler={this.props.postHandler}/>
                         })}
-                    </div>
                 </main>
-                <footer className="footer">
+                <footer className={classes.footer}>
                     <h3>learning react app</h3>
                 </footer>
             </>

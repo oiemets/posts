@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from '../Comment/Comment';
+import classes from './Details.module.css';
 
 export default class extends Component {
     state = {
@@ -30,23 +31,21 @@ export default class extends Component {
         return (
             <>
             <header>
-                <div className="arrow" onClick={this.props.backBtnHandler}/>
-                <h1 className="details-title">details</h1>
+                <div className={classes.arrow} onClick={this.props.backBtnHandler}/>
+                <h1>details</h1>
             </header>
-            <main className="main">
-                <div className="details">
+            <main className={classes.main}>
+                <div className={classes.details}>
                     <h3>author: {this.props.post.author}</h3>
                     <h3>date: {this.props.post.date}</h3>
                     <h3>posted:</h3>
                     <p>{this.props.post.content}</p>
                 </div>
-                <div className="comments-container">
-                    <h3 className="comments-title">comments:</h3>
+                    <h3 className={classes.commentsTitle}>comments:</h3>
                     {this.props.post.comments.map((comment, index) => {
                         return <Comment comment={comment} key={index}/>
                     })}
-                </div>
-                    <div className="leave-your-comment">
+                    <div className={classes.commentForm}>
                         <input 
                             name="author" 
                             value={this.state.author} 

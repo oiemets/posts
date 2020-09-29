@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './WritePost.module.css';
 
 export default class extends React.Component {
     state = {
@@ -47,10 +48,10 @@ export default class extends React.Component {
         return (
             <>
                 <header>
-                    <div className="arrow-post" onClick={this.props.backBtnHandler}/>
+                    <div className={classes.arrow} onClick={this.props.backBtnHandler}/>
                     <h1>write your post</h1>
                 </header>
-                <div className="post-form">
+                <div className={classes.postForm}>
                     <input
                         value={this.state.author} 
                         name="author" 

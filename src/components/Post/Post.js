@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './Post.module.css';
 
 export default class extends Component {
 
@@ -8,7 +9,7 @@ export default class extends Component {
 
     render() {
         return (
-            <div className="post" onClick={this.postClickHandler}>
+            <div className={classes.post} onClick={this.postClickHandler}>
             <h3>{this.props.post.author}</h3>
             <h3>{this.props.post.date}</h3>
             <h3>posted:</h3>
